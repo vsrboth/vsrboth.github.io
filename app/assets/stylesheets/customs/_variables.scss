@@ -1,0 +1,68 @@
+$gray-darker:           #333    !default;
+$gray-dark:             #777    !default;
+$gray:                  #e5e5e5 !default;
+$gray-light:            #eee    !default;
+$gray-lighter:          #fafafa !default;
+
+$brand-primary:         #4C91CC !default;
+$brand-success:         #5FB95F !default;
+$brand-warning:         #F1B259 !default;
+$brand-danger:          #DB5A57 !default;
+$brand-info:            #69C6E1 !default;
+
+//== Scaffolding
+//
+// ## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #f5f5f5 !default;
+//** Global text color on `<body>`.
+$text-color:            $gray-darker !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+$border-color:          $gray;
+// Other colors
+// -------------------------
+
+$nprogress-color:          $brand-primary;
+$nav-link-hover-bg:        #D6E6F4;
+$browse-image-hover-color: #9BC0E1;
+
+$white:                    #fff;
+
+// Grid system
+// -------------------------
+
+// Number of columns in the grid system
+$grid-columns:          24;
+// Padding, to be divided by two and applied to the left and right of all columns
+$grid-gutter-width:     16px;
+
+$font-family-sans-serif: "Open Sans", sans-serif, Helvetica, Arial !default;
+
+// Buttons
+// -------------------------
+
+
+// Panels
+// -------------------------
+$panel-footer-bg:             $gray-lighter !default;
+$panel-default-heading-bg:    $gray-lighter !default;
+
+// Form
+// -------------------------
+
+$input-color:                 $gray-darker;
+$input-color-placeholder:     #bababa;
+
+//== Alert
+$alert-link-font-weight:      600 !default;
+
+//== Badges
+$badge-font-weight:           600 !default;
+
+//== Close
+$close-font-weight:           600 !default;

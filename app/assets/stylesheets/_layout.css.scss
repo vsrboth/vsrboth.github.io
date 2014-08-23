@@ -1,0 +1,24 @@
+body {
+  padding-top: 73px;
+  padding-bottom: 30px;
+  min-width: 1008px;
+}
+
+.container {
+  max-width: none !important;
+  width: 1008px !important;
+}
+hr {
+  border-color: $gray;
+}
+a {
+  color: $link-color;
+  &:hover,
+  &:focus {
+    color: $link-color;
+  }
+}
+
+:focus {
+  outline: none;
+}
