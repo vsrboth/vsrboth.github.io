@@ -1,0 +1,15 @@
+- if account_signed_in?
+  #dropdown-menu-container.btn-group
+    %span.btn.btn-default#active-sub-resource.btn{ style: 'width: 162px;' }
+
+    %button#caret-height.btn.btn-default.dropdown-toggle{ 'data-toggle' => 'dropdown' }
+      %span.caret
+    %ul.nav.nav-list.dropdown-menu
+      %li
+        = link_to 'Invoice', nil
+      %li
+        = link_to 'Customer Profile', nil
+      %li
+        = link_to 'Employee Profile', nil
+      %li
+        = link_to 'My Services', nil

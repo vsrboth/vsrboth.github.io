@@ -1,0 +1,18 @@
+.bs-sidebar.affix{role: 'complementary'}
+  %ul.nav.nav-pills.nav-stacked
+    - if account_signed_in?
+      - if params[:controller].eql? 'employee_attendants'
+        %li{ class: "#{yield :checkin_time_sidebar_item}" }
+          = link_to "Checkin Time", nil
+        %li{ class: "#{yield :checkout_time_sidebar_item}" }
+          = link_to "Checkout Time", nil
+    - if is_setting_active?(params[:controller])
+      - if account_signed_in?
+        %li{ class: "#{yield :membership_scoring_sidebar_item}"}
+          = link_to 'Membership Scoring', membership_scoring_conditions_path
+        %li{ class: "#{yield :staff_commision_sidebar_item}"}
+          = link_to 'Staff Commision', nil
+        %li{ class: "#{yield :product_category_sidebar_item}"}
+          = link_to 'Product Category', service_categories_path
+        %li{ class: "#{yield :service_item_sidebar_item}"}
+          = link_to 'Service Items', service_items_path

@@ -1,0 +1,9 @@
+.row
+  .col-md-3
+  .col-md-9
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title
+          Edit an Appointment
+      .panel-body
+        = render 'form', url: appointment_path(@appointment)

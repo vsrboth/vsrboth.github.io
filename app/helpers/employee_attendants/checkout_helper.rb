@@ -1,0 +1,2 @@
+module EmployeeAttendants::CheckoutHelper
+end

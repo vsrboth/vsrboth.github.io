@@ -30,15 +30,23 @@ gem 'therubyracer',               '~> 0.12.1'
 gem 'sass',                       '~> 3.2.0'
 gem 'sass-rails',                 '~> 4.0.3'
 gem 'bootstrap-sass',             '~> 3.2.0.1'
+gem 'bootstrap-datepicker-rails', '~> 1.3.0.2'
+gem 'bootstrap-timepicker-rails', '~> 0.1.3'
 gem 'autoprefixer-rails',         '~> 2.2.0.20140804'
 gem 'haml_coffee_assets',         '~> 1.16.0'
 gem 'coffee-rails',               '~> 4.0.1'
 gem 'jquery-rails',               '~> 3.1.1'
+gem 'jquery-turbolinks',          '~> 2.0.1'
 gem 'jquery-ui-rails',            '~> 5.0.0'
+gem 'will_paginate',              '~> 3.0.7'
 
 # tool
 
-gem 'dotenv-rails', '~> 0.11.1'
+gem 'dotenv-rails',               '~> 0.11.1'
+gem 'cancan',                     '~> 1.6.10'
+gem 'paperclip',                  '~> 4.2.0'
+gem 'virtus',                     '~> 1.0.3'
+gem 'fullcalendar-rails',         '~> 1.6.4.0'
 
 
 group :doc do

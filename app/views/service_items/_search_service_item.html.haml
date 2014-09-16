@@ -1,0 +1,8 @@
+.dropdown{action: nil, style: 'float:left; padding-right: 14px;'}
+  %button.btn.btn-default.btn-xs.dropdown-toggle{ type: 'button', data_toggle: 'dropdown', id: 'category' }
+    Service Category
+    %span.caret
+  %ul.dropdown-menu{ role: 'menu', aria_labelledby: 'category' }
+    - @categories.each do |category|
+      %li
+        = link_to category.name, filter_by_category_service_items_path, q: category.id

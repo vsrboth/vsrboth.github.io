@@ -1,0 +1,12 @@
+- if account_signed_in?
+  %header#header.navbar.navbar-default.navbar-fixed-top
+    .container
+      = render 'shared/notification'
+      .row
+        .col-md-2
+          = image_tag "#{asset_path('logo.png')}", width: 50, height: 50
+        .col-md-7
+          .navbar-header
+            %h1 Bi Salon
+        .col-md-3
+          = render 'shared/user_menu'

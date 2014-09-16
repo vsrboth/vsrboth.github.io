@@ -1,0 +1,24 @@
+- content_for :customer_profile_sidebar_item, 'active'
+
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title
+      Customer Profile
+
+  .panel-body.panel-padding-bottom-none
+  - if @clients.nil?
+    = render 'shared/none', { title: 'No client profile yet.', link_text: 'Add a new client profile.', link_url: new_client_path }
+  - else
+    %table.table.table-hover
+      %thead
+        %th #
+        %th Title
+        %th Name
+        %th Gender
+        %th Birthdate
+        %th Address
+      %tbody
+        - @clients.each do |client|
+          %tr
+            %td= client.title
+            %td= client.full_name

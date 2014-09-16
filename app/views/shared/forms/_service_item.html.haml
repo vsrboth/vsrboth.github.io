@@ -1,0 +1,10 @@
+%fieldset
+  %div{ style: 'display:inline-block; float: left;' }
+    .pull-left
+      = f.input :item, input_html: { class: 'field-medium' }
+    .pull-right{ style: 'padding-left: 14px; padding-right: 14px;' }
+      = f.input :price, input_html: { class: 'field-medium' }
+  %div{ style: 'float: left;' }
+    = f.input_field :_destroy, as: :hidden
+    = link_to nil, { class: 'link_action remove_fields', data: { original_title: 'Remove', rel: 'tooltip'} } do
+      %span.glyphicon.glyphicon-trash

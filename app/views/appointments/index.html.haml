@@ -1,0 +1,52 @@
+.row
+  .col-md-3
+    .bs-sidebar.affix{ role: 'complementary' }
+      %ul.nav.nav-pills.nav-stacked
+        %li{ class: 'active' }
+          = link_to 'Appointment List', appointments_path
+        %li
+          = link_to 'Stylist', stylist_appointments_path
+        %li
+          = link_to 'Customer', customer_appointments_path
+  .col-md-9
+    = render '/shared/date_filter'
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title
+          Appointment List
+          .pull-right
+            - unless @appointments.empty?
+              = link_to new_appointment_path, class: 'btn btn-default btn-xs' do
+                %span.glyphicon.glyphicon-plus
+                  Add New
+      .panel-body
+        - if @appointments.empty?
+          = render 'shared/none', { title: 'No appointment for today.', link_text: 'Add an Appointment', link_url: new_appointment_path }
+        - else
+          %table.table.table-hover
+            %thead
+              %th #
+              %th Appointment Time
+              %th Client
+              %th Stylist
+              %th Service
+              %th
+            %tbody
+              - @appointments.each_with_index do |appointment, index|
+                %tr
+                  %td= index + 1
+                  %td= appointment.appointment_time
+                  %td= appointment.client.full_name
+                  %td= appointment.employee.full_name
+                  %td
+                    %ul.nav.nav-pills.nav-stacked
+                      - service_list(appointment).each_with_index do |service, index|
+                        %li
+                          .page-header
+                            = service.item
+                  %td
+                    .pull-right
+                      = link_to edit_appointment_path(appointment), { class: 'link_action btn btn-default btn-xs', data: { original_title: 'Edit', rel: 'tooltip'}} do
+                        %span.glyphicon.glyphicon-pencil
+                      = link_to appointment_path(appointment), { class: 'link_action btn btn-default btn-xs', data: { confirm: 'Do you want to delete this category?', method: :delete, original_title: 'Delete', rel: 'tooltip'}} do
+                        %span.glyphicon.glyphicon-trash

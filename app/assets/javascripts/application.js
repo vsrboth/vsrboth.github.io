@@ -12,7 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require jquery
+//= require select2.min
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker
+//= require bootstrap-timepicker
+//= require customs/namespace
+//= require customs/cookie
+//= require customs/date_filter
 //= require_tree .

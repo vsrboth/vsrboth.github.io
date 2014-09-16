@@ -1,0 +1,2 @@
+module EmployeeAttendants::CheckinHelper
+end

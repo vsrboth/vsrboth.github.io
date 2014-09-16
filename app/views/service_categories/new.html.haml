@@ -1,0 +1,9 @@
+- content_for :product_category_sidebar_item, 'active'
+
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title
+      Add a Product Category
+
+  .panel-body
+    = render 'form', url: service_categories_path

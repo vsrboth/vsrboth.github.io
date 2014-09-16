@@ -2,4 +2,29 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  before_action :authenticate_account!
+
+  private
+
+    def after_sign_in_path_for(resource_or_scope)
+      root_path
+    end
+
+    def after_sign_out_path_for(resource_or_scope)
+      sign_in_path
+    end
+
+    def get_filter_date
+      @filter_date = DateFilter.new(date_filter)
+    end
+
+    def date_filter
+      return get_today_date unless cookies[:date_filter].present?
+      JSON.parse(cookies[:date_filter], symbolize_names: true)
+    end
+
+    def get_today_date
+      { filtered_date: Date.today.strftime('%b %d, %Y') }
+    end
 end

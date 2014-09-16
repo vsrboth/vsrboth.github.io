@@ -1,8 +1,45 @@
 BiSalon::Application.routes.draw do
+  root to: 'home#index'
 
   devise_for :accounts
 
   devise_scope :account do
-    root :to => 'devise/sessions#new'
+    get "sign_in", to: "devise/sessions#new"
+  end
+
+  resources :appointments do
+    collection do
+      get :stylist
+      get :customer
+    end
+  end
+
+  resources :invoices
+  resources :employee_attendants, only: [:index] do
+    collection do
+      get '/checkin_approve/:id', to: 'employee_attendants#checkin_approve',    as: :checkin_approve
+      get '/checkin_deny/:id',    to: 'employee_attendants#checkin_deny',       as: :checkin_deny
+
+      get '/checkout_approve/:id', to: 'employee_attendants#checkout_approve',  as: :checkout_approve
+      get '/checkout_deny/:id',   to: 'employee_attendants#checkout_deny',      as: :checkout_deny
+    end
+  end
+
+  namespace :employee_attendants do
+    resources :checkin, only: [:index, :new, :create]
+    resources :checkout, only: [:index, :new, :create]
+  end
+
+  resources :clients
+  resources :employees
+  resources :positions, except: [:show]
+
+  resources :settings, only: [:index]
+  resources :membership_scoring_conditions
+  resources :service_categories
+  resources :service_items do
+    collection do
+      get :filter_by_category
+    end
   end
 end

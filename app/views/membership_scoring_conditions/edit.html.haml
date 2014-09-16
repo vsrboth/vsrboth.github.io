@@ -1,0 +1,8 @@
+- content_for :membership_scoring_sidebar_item, 'active'
+
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title
+      Edit a New Membership Scoring Condition
+  .panel-body
+    = render 'form', url: membership_scoring_condition_path(@membership_scoring)

@@ -1,0 +1,18 @@
+#notification{ 'data-alert' => 'alert' }
+  - flash.each do |type, messages|
+    - case type
+      - when :notice
+        - type = :success
+      - when :alert
+        - type = :danger
+      - else
+        - type
+
+    .alert{ class: "alert-#{type.to_s} fade in" }
+      = link_to '×', '#', 'class' => 'close', 'data-dismiss' => 'alert'
+      %ul.list-style-none
+        - messages.split("\n").each do |message|
+          %li= message
+    - if type != :info
+      :javascript
+        setTimeout("$('#notification').children().first().remove()", 10000);

@@ -1,0 +1,28 @@
+- if account_signed_in?
+  .container
+    .navbar.navbar-default
+      %ul.nav.nav-pills{style: 'padding-top: 5px;'}
+        %li{ class: "#{yield :invoice_sidebar_item}" }
+          = link_to new_invoice_path do
+            %span.glyphicon.glyphicon-credit-card
+            Invoice
+        %li{ class: "#{yield :appointment_sidebar_item}" }
+          = link_to appointments_path do
+            %span.glyphicon.glyphicon-calendar
+            Appointment
+        %li{ class: "#{yield :staff_attendant_sidebar_item}" }
+          = link_to employee_attendants_path do
+            %span.glyphicon.glyphicon-list-alt
+            Attendant
+        %li{ class: "#{yield :user_account_sidebar_item}" }
+          = link_to clients_path do
+            %span.glyphicon.glyphicon-user
+            Client Profile
+        %li{ class: "#{yield :user_account_sidebar_item}" }
+          = link_to employees_path do
+            %span.glyphicon.glyphicon-user
+            Employee Profile
+        %li{ class: "#{yield :report_sidebar_item}" }
+          = link_to nil do
+            %span.glyphicon.glyphicon-stats
+            Report

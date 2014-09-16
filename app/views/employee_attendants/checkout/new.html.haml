@@ -1,0 +1,27 @@
+.row
+  .col-md-3
+    .bs-sidebar.affix{role: 'complementary'}
+      %ul.nav.nav-pills.nav-stacked
+        %li
+          = link_to "Attendant List", employee_attendants_path
+        %li
+          = link_to "Checkin Time", new_employee_attendants_checkin_path
+        %li{ class: "active" }
+          = link_to "Checkout Time", new_employee_attendants_checkout_path
+  .col-md-9
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title
+          Employee Checkout Time
+      .panel-body
+        = simple_form_for @employee_checkout, html: { class: 'box-content' }, url: employee_attendants_checkout_index_path do |f|
+          - if f.error_notification
+            .alert.alert-danger.fade.in
+              = link_to '×', '#', class: 'close', 'data-dismiss' => 'alert'
+              = f.error_notification
+
+          .form-elements
+            #employee_list{ 'data-employees' => Employee.all.map(&:to_select2).to_json }
+              = f.input :employee_id, label: 'Employee', input_html: { class: 'field-long', id: 'employee_select2' }
+          .form-actions
+            = f.submit 'Checkout', class: 'btn btn-success'

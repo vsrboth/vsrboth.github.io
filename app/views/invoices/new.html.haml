@@ -1,0 +1,27 @@
+.panel.panel-default
+  .panel-heading
+    %h4.panel-title
+      Invoice
+
+  .panel-body
+    = simple_form_for Invoice.new, html: { class: 'box-content' }, url: invoices_path do |f|
+      .form-elements
+        #customer_list{ 'data-customers' => Client.all.map(&:to_select2).to_json }
+          = f.input :client_id, label: 'Customer', input_html: { class: 'field-long', id: 'customer_select2' }
+      .form-elements
+        .row
+          .col-xs-3
+            = f.input :deposit, input_html: { class: 'field-medium', value: 0 }
+          .col-xs-3
+            = f.input :payment_method, collection: ['Cash', 'Credit Card'], input_html: { class: 'field-medium' }
+          .col-xs-3
+            = f.input :total, input_html: { class: 'field-medium', value: 0 }
+          .col-xs-3{ style: 'padding-top: 25px;'}
+            = f.submit 'Save', class: 'btn btn-success'
+      .form-actions
+        = f.simple_fields_for :invoice_details do |builder|
+          = render 'shared/forms/invoice_detail', f: builder
+        = link_to_add_fields 'Add Service Item', f, :invoice_details
+
+
+

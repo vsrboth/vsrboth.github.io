@@ -1,0 +1,11 @@
+- if account_signed_in?
+  - controller = params[:controller]
+  - unless is_employee_setting?(controller) || is_user_account_setting?(controller)
+    %ul.nav.navbar-nav.navbar-right.nav-user-links
+      %li.dropdown
+        %a.dropdown-toggle{ 'data-toggle' => 'dropdown', href: '#' }
+          %span.account-email= current_account.email
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            = link_to 'Sign Out', destroy_account_session_path, method: :delete

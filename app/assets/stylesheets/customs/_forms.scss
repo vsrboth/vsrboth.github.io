@@ -31,9 +31,13 @@ form {
   .add_fields {
     text-decoration: none;
   }
+
+  .checkbox-justify {
+    margin-left: 20px;
+  }
 }
 
-.form-actions {
+.form-actions, .form-divider {
   border-top: 1px solid #E5E5E5;
   margin-top: 24px;
   padding: 14px 0 0;

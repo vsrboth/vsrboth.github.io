@@ -24,12 +24,12 @@ test:
   password: <%= ENV['MYSQL2_PASSWORD_TEST'] %>
   host: <%= ENV['MYSQL2_HOST_TEST'] %>
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  collation: utf8_unicode_ci
-  database: <%= ENV['MYSQL2_DATABASE'] %>
-  username: <%= ENV['MYSQL2_USERNAME'] %>
-  password: <%= ENV['MYSQL2_PASSWORD'] %>
-  host: <%= ENV['MYSQL2_HOST'] %>
-  pool: 50
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   collation: utf8_unicode_ci
+#   database: <%= ENV['MYSQL2_DATABASE'] %>
+#   username: <%= ENV['MYSQL2_USERNAME'] %>
+#   password: <%= ENV['MYSQL2_PASSWORD'] %>
+#   host: <%= ENV['MYSQL2_HOST'] %>
+#   pool: 50

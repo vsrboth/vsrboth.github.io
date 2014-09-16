@@ -1,0 +1,16 @@
+.row
+  .col-md-3
+    .bs-sidebar.affix{role: 'complementary'}
+      %ul.nav.nav-pills.nav-stacked
+        %li{ class: "active" }
+          = link_to "Client Profile", clients_path
+        %li
+          = link_to "Client Saving Score", positions_path
+  .col-md-9
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title
+          Edit a Customer
+
+      .panel-body
+        = render 'form', url: client_path(@client)

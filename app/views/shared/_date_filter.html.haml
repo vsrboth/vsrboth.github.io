@@ -1,0 +1,9 @@
+= simple_form_for @filter_date, url: toggle_filter_url(params[:controller], params[:action]), method: 'get', html: { class: 'form-filter box-content' } do |f|
+  .form-elements
+    .row
+      .col-md-2{ style: 'padding-top: 7px;margin-right: -40px;'}
+        = f.label 'Date Filter', required: false
+      .col-md-6#filter_by_date
+        = f.input :filtered, label: false, input_html: { class: 'filtered-date field-long', value: Date.parse(@filter_date.filtered_date).strftime('%d %b %Y'), 'data-behaviour' => 'datepicker' }
+      .col-md-4
+        = f.submit 'Search', class: 'btn btn-success', id: 'btn-submit', data: { disable_with: 'Searching...' }
