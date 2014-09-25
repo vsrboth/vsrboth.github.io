@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140915145326) do
+ActiveRecord::Schema.define(version: 20140923101019) do
 
   create_table "account_roles", force: true do |t|
     t.integer  "account_id"
@@ -45,11 +45,13 @@ ActiveRecord::Schema.define(version: 20140915145326) do
   create_table "appointments", force: true do |t|
     t.integer  "client_id"
     t.integer  "employee_id"
-    t.string   "appointment_date"
-    t.string   "appointment_time"
+    t.string   "title"
+    t.string   "description"
+    t.string   "start_time"
+    t.string   "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "service_item_ids"
+    t.string   "status",      default: "inactive"
   end
 
   add_index "appointments", ["client_id"], name: "index_appointments_on_client_id", using: :btree

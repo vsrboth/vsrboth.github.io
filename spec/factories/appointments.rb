@@ -4,7 +4,9 @@ FactoryGirl.define do
   factory :appointment do
     client nil
     employee nil
-    appointment_date "MyString"
-    appointment_time "MyString"
+    title "MyString"
+    description "MyString"
+    start_time "MyString"
+    end_time "MyString"
   end
 end

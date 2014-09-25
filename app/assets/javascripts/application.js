@@ -15,8 +15,11 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require jquery
+//= require fullcalendar
 //= require select2.min
 //= require bootstrap-sprockets
+//= require moment
+//= require bootstrap-datetimepicker
 //= require bootstrap-datepicker
 //= require bootstrap-timepicker
 //= require customs/namespace

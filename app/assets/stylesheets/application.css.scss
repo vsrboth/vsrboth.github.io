@@ -1,9 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-datepicker3";
+@import 'bootstrap-datetimepicker';
 
 @import "libs/select2";
 @import "libs/select2_bootstrap";
+
+@import "fullcalendar";
 
 @import "customs/variables";
 @import "customs/mixins";

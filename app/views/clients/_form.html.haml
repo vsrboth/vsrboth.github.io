@@ -13,14 +13,14 @@
     = f.input :birth_date, input_html: { class: 'field-long', 'data-behaviour' => 'datepicker'}
     = f.input :occupation, input_html: { class: 'field-long' }
     = f.input :address, as: :text, input_html: { class: 'field-long' }
+    = f.input :remark, as: :text, input_html: { class: 'field-long' }
 
+    = f.label 'Client contact info'
   .form-actions
     // nested model
     = f.simple_fields_for :communications do |builder|
       = render 'shared/forms/communication', f: builder
     = link_to_add_fields 'Add Communication', f, :communications
-  .form-actions
-    = f.input :remark, as: :text, input_html: { class: 'field-long' }
   .form-actions
     = f.submit 'Save', class: 'btn btn-success', data: { disable_with: 'Saving...'}
     = link_to 'Cancel', clients_path, class: 'btn btn-default'

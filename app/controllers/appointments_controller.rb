@@ -4,7 +4,11 @@ class AppointmentsController < ApplicationController
   before_action :get_filter_date, only: [:index, :stylist, :customer]
 
   def index
-    @appointments = Appointment.where(appointment_date: @filter_date.filtered_date)
+    @appointments = Appointment.where("Date(start_time) = ?", @filter_date.filtered_date)
+    respond_to do |format|
+      format.html
+      format.json { render json: @appointments.as_json }
+    end
   end
 
   def new
@@ -33,19 +37,12 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
-  def stylist
-    @stylists = Employee.joins(:appointments).where('appointments.appointment_date = ?', @filter_date.filtered_date)
-  end
-
-  def customer
-    @customers = Client.joins(:appointments).where('appointments.appointment_date = ?', @filter_date.filtered_date)
+  def update_appointment_status
   end
 
   private
     def set_appointment_param
-      params.require(:appointment).permit(:client_id, :employee_id, :service_item_ids, :appointment_date, :appointment_time)
+      params.require(:appointment).permit(:client_id, :employee_id, :title, :description, :start_time)
+            .merge(end_time: DateTime.now)
     end
 end

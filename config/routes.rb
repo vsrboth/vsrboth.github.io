@@ -9,8 +9,7 @@ BiSalon::Application.routes.draw do
 
   resources :appointments do
     collection do
-      get :stylist
-      get :customer
+      get :update_appointment_status
     end
   end
 

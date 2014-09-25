@@ -25,6 +25,6 @@ class ApplicationController < ActionController::Base
     end
 
     def get_today_date
-      { filtered_date: Date.today.strftime('%b %d, %Y') }
+      { filtered_date: Date.today.strftime('%Y-%m-%d') }
     end
 end

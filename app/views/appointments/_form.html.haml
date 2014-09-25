@@ -1,20 +1,18 @@
-= simple_form_for @appointment, html: { class: 'box-content' }, url: url do |f|
-
+= simple_form_for Appointment.new, html: { class: 'box-content' }, url: url do |f|
   - if f.error_notification
     .alert.alert-danger.fade.in
       = link_to '×', '#', class: 'close', 'data-dismiss' => 'alert'
       = f.error_notification
 
   .form-elements
-    = f.input :appointment_date, input_html: { class: 'field-long', value: Date.today.strftime('%d %b %Y'), 'data-behaviour' => 'datepicker' }
-    = f.input :appointment_time, input_html: { class: 'field-long', id: 'timepicker' }
+    = f.input :title, input_html: { class: 'field-long' }
+    = f.input :description, as: :text, input_html: { class: 'field-long' }
+    = f.input :start_time, label: 'Appointment Date Time', input_html: { class: 'field-long', id: 'appointment_datetime_picker', 'data-date-format' => 'YYYY-MM-DD HH:mm' }
     #customer_list{ 'data-customers' => Client.all.map(&:to_select2).to_json }
       = f.input :client_id, label: 'Customer', input_html: { class: 'field-long', id: 'customer_select2' }
     #employee_list{ 'data-employees' => Employee.all.map(&:to_select2).to_json }
       = f.input :employee_id, label: 'Employee', input_html: { class: 'field-long', id: 'employee_select2' }
-    #service_item_list{ 'data-items' => ServiceItem.all.map(&:to_select2).to_json }
-      = f.input :service_item_ids, label: 'Services', input_html: { class: 'field-long', id: 'service_item_select2' }
 
   .form-actions
     = f.submit 'Save', class: 'btn btn-success'
-    = link_to 'Cancel', appointments_path, class: 'btn btn-default'
+    = link_to 'Cancel', appointments_path, { class: 'btn btn-default', data_dismiss: 'modal' }
