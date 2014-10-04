@@ -1,0 +1,19 @@
+%table.table.table-hover
+  %thead
+    %th #
+    %th Service
+    %th Price
+    %th Stylist
+    %th Discount
+    %th
+  %tbody
+    - invoice_detail_list.each_with_index do |list, index|
+      %tr{ id: "list_#{list.id}"}
+        %td= index + 1
+        %td= list.service_name
+        %td= list.new_price
+        %td= list.full_name
+        %td= list.discount_value
+        %td
+          = link_to invoice_detail_path(list), { class: 'link_action btn btn-default btn-xs', remote: true, data: { confirm: 'Do you want to remove this service?', method: :delete, original_title: 'Delete', rel: 'tooltip'}} do
+            %span.glyphicon.glyphicon-trash

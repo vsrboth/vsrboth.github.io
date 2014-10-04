@@ -49,6 +49,8 @@ gem 'cancan',                           '~> 1.6.10'
 gem 'paperclip',                        '~> 4.2.0'
 gem 'virtus',                           '~> 1.0.3'
 gem 'fullcalendar-rails',               '~> 1.6.4.0'
+gem 'wicked_pdf',                       '~> 0.11.0'
+gem 'wkhtmltopdf-binary',               '~> 0.9.9.3'
 
 
 group :doc do

@@ -1,0 +1,5 @@
+$('#invoice-detail-list').html('<%= escape_javascript(render :partial => "invoice_detail_list", :locals => { :invoice_detail_list => @invoice_detail_list} ) %>')
+
+price = "<%= @invoice_detail.new_price %>";
+totalPrice = parseInt($('#invoice_total').val()) + parseInt(price);
+$('#invoice_total').val(totalPrice);

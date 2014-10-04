@@ -11,10 +11,10 @@
       .panel-heading
         %h3.panel-title
           Customer Profile
-          .pull-right
-            = link_to new_client_path, class: 'btn btn-default btn-xs' do
-              %span.glyphicon.glyphicon-plus
-              Add New
+        .panel-heading-action
+          = link_to new_client_path, class: 'btn btn-default btn-xs' do
+            %span.glyphicon.glyphicon-plus
+            Add New
       .panel-body
         - if @clients.empty?
           = render 'shared/none', { title: 'No Client Profile Yet.', link_text: 'Add a new client', link_url: new_client_path }

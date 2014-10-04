@@ -7,7 +7,7 @@
         .panel-heading-action
           = link_to new_appointment_path, class: 'btn btn-default btn-xs' do
             %span.glyphicon.glyphicon-plus
-              Add New
+            Add New Appointment
       .panel-body
         %div#calendar
 
@@ -39,8 +39,8 @@
 
       .modal-footer
         %button.btn.btn-default{ 'data-dismiss' => 'modal' } Close
-        %button.btn.btn-default{ id: 'edit-appointment' } Edit
-        %button.btn.btn-success{ id: 'clear-appointment' } Clear Appointment
+        %a.btn.btn-default{ id: 'edit-appointment', href: '' } Edit
+        %a.btn.btn-success{ id: 'clear-appointment', href: '' } Clear Appointment
 
 / .row
 /   .col-md-3

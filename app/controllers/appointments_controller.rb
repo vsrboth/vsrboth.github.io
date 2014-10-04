@@ -4,7 +4,8 @@ class AppointmentsController < ApplicationController
   before_action :get_filter_date, only: [:index, :stylist, :customer]
 
   def index
-    @appointments = Appointment.where("Date(start_time) = ?", @filter_date.filtered_date)
+    # @appointments = Appointment.where("Date(start_time) = ? AND status = 'inactive'", @filter_date.filtered_date)
+    @appointments = Appointment.list(@filter_date.filtered_date, 'inactive')
     respond_to do |format|
       format.html
       format.json { render json: @appointments.as_json }
@@ -37,7 +38,13 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def update_appointment_status
+  def clear_appointment
+    @appointment = Appointment.find(params[:id])
+    if @appointment.update_attributes(status: 'active')
+      redirect_to appointments_path
+    else
+      redirect_to appointments_path
+    end
   end
 
   private

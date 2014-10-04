@@ -1,18 +1,19 @@
-%fieldset
-  .row
-    .col-xs-3{ style: 'width: 19%;' }
-      #service_items{ 'data-items' => ServiceItem.all.map(&:to_select2).to_json }
-      = f.input :service_item_id, input_html: { class: 'field-medium', id: 'service_item_select2' }
-    .col-xs-3{ style: 'width: 19%' }
-      = f.input :new_price, label: 'Price (USD)', input_html: { class: 'field-medium', value: 0 }
-    .col-xs-3{ style: 'width: 19%' }
-      #employee_list{ 'data-employees' => Employee.all.map(&:to_select2).to_json }
-        = f.input :employee_id, label: 'Employee', input_html: { class: 'field-medium', id: 'employee_select2' }
-    .col-xs-3{ style: 'width: 19%;' }
-      = f.input :discount_type, collection: [ 'Percentage', 'Currency' ], input_html: { class: 'field-medium' }
-    .col-xs-3{ style: 'width: 19%;' }
-      = f.input :discount_value, input_html: { class: 'field-medium' }
-    .col-xs-1{ style: 'width: 4%; padding-top: 30px;'}
-      = f.input_field :_destroy, as: :hidden
-      = link_to nil, { class: 'link_action remove_fields', data: { original_title: 'Remove', rel: 'tooltip'} } do
-        %span.glyphicon.glyphicon-remove
+= simple_form_for InvoiceDetail.new, html: { class: 'box-content' }, remote: true do |f|
+  .form-elements
+    .row
+      .col-xs-5
+        #service_items{ 'data-items' => ServiceItem.all.map(&:to_select2).to_json }
+          = f.input :service_item_id, input_html: { class: 'field-long', id: 'service_item_select2' }
+      .col-xs-2
+        = f.input :new_price, label: 'Price (USD)', input_html: { class: 'field-small', value: 0 }
+      .col-xs-3
+        #employee_list{ 'data-employees' => Employee.all.map(&:to_select2).to_json }
+          = f.input :employee_id, label: 'Employee', prompt: 'Please select a stylist', input_html: { class: 'field-long', id: 'employee_select2' }
+    .row
+      .col-xs-5
+        = f.input :discount_type, collection: [ 'Percentage', 'Currency' ], prompt: 'Please select a discount type', input_html: { class: 'field-long' }
+      .col-xs-2
+        = f.input :discount_value, input_html: { class: 'field-small', value: 0 }
+      .col-xs-3{ style: 'padding-top: 25px;'}
+        = f.submit 'Add', class: 'btn btn-success'
+  .form-divider

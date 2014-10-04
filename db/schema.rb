@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923101019) do
+ActiveRecord::Schema.define(version: 20140930133935) do
 
   create_table "account_roles", force: true do |t|
     t.integer  "account_id"
@@ -62,6 +62,25 @@ ActiveRecord::Schema.define(version: 20140923101019) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "client_loyalty_point_invoices", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "invoice_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "client_loyalty_point_invoices", ["client_id"], name: "index_client_loyalty_point_invoices_on_client_id", using: :btree
+  add_index "client_loyalty_point_invoices", ["invoice_id"], name: "index_client_loyalty_point_invoices_on_invoice_id", using: :btree
+
+  create_table "client_loyalty_points", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "point"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "client_loyalty_points", ["client_id"], name: "index_client_loyalty_points_on_client_id", using: :btree
 
   create_table "clients", force: true do |t|
     t.string   "title"
@@ -142,6 +161,8 @@ ActiveRecord::Schema.define(version: 20140923101019) do
     t.decimal  "discount",       precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",                                  default: "unpaid"
+    t.string   "invoice_code",                            default: "BSI000000"
   end
 
   add_index "invoices", ["client_id"], name: "index_invoices_on_client_id", using: :btree

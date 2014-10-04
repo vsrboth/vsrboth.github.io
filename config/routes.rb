@@ -9,11 +9,17 @@ BiSalon::Application.routes.draw do
 
   resources :appointments do
     collection do
-      get :update_appointment_status
+      get '/:id/clear_appointment', to: 'appointments#clear_appointment'
     end
   end
 
-  resources :invoices
+  resources :invoices do
+    collection do
+      get '/:id/paid_and_print_invoice', to: 'invoices#paid_and_print_invoice', as: :paid
+      get '/:id/apply_point', to: 'invoices#apply_point', as: :apply_point
+    end
+  end
+  resources :invoice_details
   resources :employee_attendants, only: [:index] do
     collection do
       get '/checkin_approve/:id', to: 'employee_attendants#checkin_approve',    as: :checkin_approve

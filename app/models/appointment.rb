@@ -1,6 +1,12 @@
 class Appointment < ActiveRecord::Base
+
+  ## Relations
   belongs_to :client
   belongs_to :employee
+
+  ## Scopes
+  scope :list, -> (filter_date, status) { where('DATE(start_time) = ? AND status = ?', filter_date, status)}
+
 
   def as_json
     {

@@ -1,0 +1,5 @@
+totalPrice = $('#invoice_total').val();
+totalPrice = parseInt(totalPrice) - parseInt("<%= @invoice_detail.new_price %>");
+$('#invoice_total').val(totalPrice);
+
+$('#list_<%= @invoice_detail.id %>').remove();

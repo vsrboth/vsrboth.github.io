@@ -4,10 +4,10 @@
   .panel-heading
     %h3.panel-title
       Membership Scoring Condition
-      .pull-right
-        = link_to new_membership_scoring_condition_path, class: 'btn btn-default btn-xs' do
-          %span.glyphicon.glyphicon-plus
-          Add New
+    .panel-heading-action
+      = link_to new_membership_scoring_condition_path, class: 'btn btn-default btn-xs' do
+        %span.glyphicon.glyphicon-plus
+        Add New
   .panel-body
     - if @membership_scoring.empty?
       = render 'shared/none', { title: 'No membership scoring condition yet.', link_text: 'Add a new condition', link_url: new_membership_scoring_condition_path }

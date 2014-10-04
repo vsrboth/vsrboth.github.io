@@ -11,10 +11,10 @@
       .panel-heading
         %h3.panel-title
           Employee Profile
-          .pull-right
-            = link_to new_employee_path, class: 'btn btn-default btn-xs' do
-              %span.glyphicon.glyphicon-plus
-              Add New
+        .panel-heading-action
+          = link_to new_employee_path, class: 'btn btn-default btn-xs' do
+            %span.glyphicon.glyphicon-plus
+            Add New
 
       .panel-body
         - if @employees.empty?

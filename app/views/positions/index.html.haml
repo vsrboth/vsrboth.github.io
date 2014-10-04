@@ -11,11 +11,11 @@
       .panel-heading
         %h3.panel-title
           Employee Position
-          .pull-right
-            - unless @positions.empty?
-              = link_to new_position_path, class: 'btn btn-default btn-xs' do
-                %span.glyphicon.glyphicon-plus
-                Add New
+        .panel-heading-action
+          - unless @positions.empty?
+            = link_to new_position_path, class: 'btn btn-default btn-xs' do
+              %span.glyphicon.glyphicon-plus
+              Add New
       .panel-body
         - if @positions.empty?
           = render 'shared/none', { title: 'No employee position yet!', link_text: 'Add a new position', link_url: new_position_path }

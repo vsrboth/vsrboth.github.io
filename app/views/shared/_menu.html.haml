@@ -3,7 +3,7 @@
     .navbar.navbar-default
       %ul.nav.nav-pills{style: 'padding-top: 5px;'}
         %li{ class: "#{yield :invoice_sidebar_item}" }
-          = link_to new_invoice_path do
+          = link_to invoices_path do
             %span.glyphicon.glyphicon-credit-card
             Invoice
         %li{ class: "#{yield :appointment_sidebar_item}" }

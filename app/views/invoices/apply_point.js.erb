@@ -1,0 +1,16 @@
+currentPrice = $('#subtotal').text();
+currentPrice = Number(currentPrice.replace(/[^0-9\.]+/g,""));
+currentPrice = currentPrice - 10;
+currentPrice = '$' + parseFloat(currentPrice, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
+$('#subtotal').text(currentPrice);
+$('#total').text(currentPrice);
+
+discountPrice = '$' + parseFloat(10, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
+$('#discount-price').text(discountPrice);
+
+
+currentPoint = $('#point').text();
+currentPoint = currentPoint - 15;
+$('#point').text(currentPoint);
+
+$('.apply-point').remove();
