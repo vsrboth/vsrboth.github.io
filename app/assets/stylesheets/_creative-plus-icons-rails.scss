@@ -1,0 +1,471 @@
+//
+// Icon Font: creative-plus-icons
+//
+
+@font-face {
+  font-family: "creative-plus-icons";
+  src: font-url("creative-plus-icons_6760659d3503be09cdd6fb687b717dd0.eot");
+  src: font-url("creative-plus-icons_6760659d3503be09cdd6fb687b717dd0.eot?#iefix") format("embedded-opentype"),
+       font-url("creative-plus-icons_6760659d3503be09cdd6fb687b717dd0.woff") format("woff"),
+       font-url("creative-plus-icons_6760659d3503be09cdd6fb687b717dd0.ttf") format("truetype"),
+       font-url("creative-plus-icons_6760659d3503be09cdd6fb687b717dd0.svg#creative-plus-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "creative-plus-icons";
+    src: font-url("creative-plus-icons_6760659d3503be09cdd6fb687b717dd0.svg#creative-plus-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.ic-ic_add_location_24px:before,
+.ic-ic_add_location_48px:before,
+.ic-ic_beenhere_24px:before,
+.ic-ic_beenhere_48px:before,
+.ic-ic_business_24px:before,
+.ic-ic_business_48px:before,
+.ic-ic_call_24px:before,
+.ic-ic_call_48px:before,
+.ic-ic_call_end_24px:before,
+.ic-ic_call_end_48px:before,
+.ic-ic_call_made_24px:before,
+.ic-ic_call_made_48px:before,
+.ic-ic_call_merge_24px:before,
+.ic-ic_call_merge_48px:before,
+.ic-ic_call_missed_24px:before,
+.ic-ic_call_missed_48px:before,
+.ic-ic_call_missed_outgoing_24px:before,
+.ic-ic_call_missed_outgoing_48px:before,
+.ic-ic_call_received_24px:before,
+.ic-ic_call_received_48px:before,
+.ic-ic_call_split_24px:before,
+.ic-ic_call_split_48px:before,
+.ic-ic_chat_24px:before,
+.ic-ic_chat_48px:before,
+.ic-ic_chat_bubble_24px:before,
+.ic-ic_chat_bubble_48px:before,
+.ic-ic_chat_bubble_outline_24px:before,
+.ic-ic_chat_bubble_outline_48px:before,
+.ic-ic_clear_all_24px:before,
+.ic-ic_clear_all_48px:before,
+.ic-ic_comment_24px:before,
+.ic-ic_comment_48px:before,
+.ic-ic_contact_mail_24px:before,
+.ic-ic_contact_mail_48px:before,
+.ic-ic_contact_phone_24px:before,
+.ic-ic_contact_phone_48px:before,
+.ic-ic_contacts_24px:before,
+.ic-ic_contacts_48px:before,
+.ic-ic_dialer_sip_24px:before,
+.ic-ic_dialer_sip_48px:before,
+.ic-ic_dialpad_24px:before,
+.ic-ic_dialpad_48px:before,
+.ic-ic_directions_24px:before,
+.ic-ic_directions_48px:before,
+.ic-ic_directions_bike_24px:before,
+.ic-ic_directions_bike_48px:before,
+.ic-ic_directions_boat_24px:before,
+.ic-ic_directions_boat_48px:before,
+.ic-ic_directions_bus_24px:before,
+.ic-ic_directions_bus_48px:before,
+.ic-ic_directions_car_24px:before,
+.ic-ic_directions_car_48px:before,
+.ic-ic_directions_railway_24px:before,
+.ic-ic_directions_railway_48px:before,
+.ic-ic_directions_run_24px:before,
+.ic-ic_directions_run_48px:before,
+.ic-ic_directions_subway_24px:before,
+.ic-ic_directions_subway_48px:before,
+.ic-ic_directions_transit_24px:before,
+.ic-ic_directions_transit_48px:before,
+.ic-ic_directions_walk_24px:before,
+.ic-ic_directions_walk_48px:before,
+.ic-ic_edit_location_24px:before,
+.ic-ic_edit_location_48px:before,
+.ic-ic_email_24px:before,
+.ic-ic_email_48px:before,
+.ic-ic_flight_24px:before,
+.ic-ic_flight_48px:before,
+.ic-ic_forum_24px:before,
+.ic-ic_forum_48px:before,
+.ic-ic_hotel_24px:before,
+.ic-ic_hotel_48px:before,
+.ic-ic_import_contacts_24px:before,
+.ic-ic_import_contacts_48px:before,
+.ic-ic_import_export_24px:before,
+.ic-ic_import_export_48px:before,
+.ic-ic_invert_colors_off_24px:before,
+.ic-ic_invert_colors_off_48px:before,
+.ic-ic_layers_24px:before,
+.ic-ic_layers_48px:before,
+.ic-ic_layers_clear_24px:before,
+.ic-ic_layers_clear_48px:before,
+.ic-ic_live_help_24px:before,
+.ic-ic_live_help_48px:before,
+.ic-ic_local_activity_24px:before,
+.ic-ic_local_activity_48px:before,
+.ic-ic_local_airport_24px:before,
+.ic-ic_local_airport_48px:before,
+.ic-ic_local_atm_24px:before,
+.ic-ic_local_atm_48px:before,
+.ic-ic_local_bar_24px:before,
+.ic-ic_local_bar_48px:before,
+.ic-ic_local_cafe_24px:before,
+.ic-ic_local_cafe_48px:before,
+.ic-ic_local_car_wash_24px:before,
+.ic-ic_local_car_wash_48px:before,
+.ic-ic_local_convenience_store_24px:before,
+.ic-ic_local_convenience_store_48px:before,
+.ic-ic_local_dining_24px:before,
+.ic-ic_local_dining_48px:before,
+.ic-ic_local_drink_24px:before,
+.ic-ic_local_drink_48px:before,
+.ic-ic_local_florist_24px:before,
+.ic-ic_local_florist_48px:before,
+.ic-ic_local_gas_station_24px:before,
+.ic-ic_local_gas_station_48px:before,
+.ic-ic_local_grocery_store_24px:before,
+.ic-ic_local_grocery_store_48px:before,
+.ic-ic_local_hospital_24px:before,
+.ic-ic_local_hospital_48px:before,
+.ic-ic_local_hotel_24px:before,
+.ic-ic_local_hotel_48px:before,
+.ic-ic_local_laundry_service_24px:before,
+.ic-ic_local_laundry_service_48px:before,
+.ic-ic_local_library_24px:before,
+.ic-ic_local_library_48px:before,
+.ic-ic_local_mall_24px:before,
+.ic-ic_local_mall_48px:before,
+.ic-ic_local_movies_24px:before,
+.ic-ic_local_movies_48px:before,
+.ic-ic_local_offer_24px:before,
+.ic-ic_local_offer_48px:before,
+.ic-ic_local_parking_24px:before,
+.ic-ic_local_parking_48px:before,
+.ic-ic_local_pharmacy_24px:before,
+.ic-ic_local_pharmacy_48px:before,
+.ic-ic_local_phone_24px:before,
+.ic-ic_local_phone_48px:before,
+.ic-ic_local_pizza_24px:before,
+.ic-ic_local_pizza_48px:before,
+.ic-ic_local_play_24px:before,
+.ic-ic_local_play_48px:before,
+.ic-ic_local_post_office_24px:before,
+.ic-ic_local_post_office_48px:before,
+.ic-ic_local_printshop_24px:before,
+.ic-ic_local_printshop_48px:before,
+.ic-ic_local_see_24px:before,
+.ic-ic_local_see_48px:before,
+.ic-ic_local_shipping_24px:before,
+.ic-ic_local_shipping_48px:before,
+.ic-ic_local_taxi_24px:before,
+.ic-ic_local_taxi_48px:before,
+.ic-ic_location_off_24px:before,
+.ic-ic_location_off_48px:before,
+.ic-ic_location_on_24px:before,
+.ic-ic_location_on_48px:before,
+.ic-ic_mail_outline_24px:before,
+.ic-ic_mail_outline_48px:before,
+.ic-ic_map_24px:before,
+.ic-ic_map_48px:before,
+.ic-ic_message_24px:before,
+.ic-ic_message_48px:before,
+.ic-ic_my_location_24px:before,
+.ic-ic_my_location_48px:before,
+.ic-ic_navigation_24px:before,
+.ic-ic_navigation_48px:before,
+.ic-ic_near_me_24px:before,
+.ic-ic_near_me_48px:before,
+.ic-ic_no_sim_24px:before,
+.ic-ic_no_sim_48px:before,
+.ic-ic_person_pin_24px:before,
+.ic-ic_person_pin_48px:before,
+.ic-ic_person_pin_circle_24px:before,
+.ic-ic_person_pin_circle_48px:before,
+.ic-ic_phone_24px:before,
+.ic-ic_phone_48px:before,
+.ic-ic_phonelink_erase_24px:before,
+.ic-ic_phonelink_lock_24px:before,
+.ic-ic_phonelink_ring_24px:before,
+.ic-ic_phonelink_setup_24px:before,
+.ic-ic_pin_drop_24px:before,
+.ic-ic_pin_drop_48px:before,
+.ic-ic_place_24px:before,
+.ic-ic_place_48px:before,
+.ic-ic_portable_wifi_off_24px:before,
+.ic-ic_portable_wifi_off_48px:before,
+.ic-ic_present_to_all_24px:before,
+.ic-ic_present_to_all_48px:before,
+.ic-ic_rate_review_24px:before,
+.ic-ic_rate_review_48px:before,
+.ic-ic_restaurant_menu_24px:before,
+.ic-ic_restaurant_menu_48px:before,
+.ic-ic_ring_volume_24px:before,
+.ic-ic_ring_volume_48px:before,
+.ic-ic_satellite_24px:before,
+.ic-ic_satellite_48px:before,
+.ic-ic_screen_share_24px:before,
+.ic-ic_screen_share_48px:before,
+.ic-ic_speaker_phone_24px:before,
+.ic-ic_speaker_phone_48px:before,
+.ic-ic_stay_current_landscape_24px:before,
+.ic-ic_stay_current_landscape_48px:before,
+.ic-ic_stay_current_portrait_24px:before,
+.ic-ic_stay_current_portrait_48px:before,
+.ic-ic_stay_primary_landscape_24px:before,
+.ic-ic_stay_primary_landscape_48px:before,
+.ic-ic_stay_primary_portrait_24px:before,
+.ic-ic_stay_primary_portrait_48px:before,
+.ic-ic_stop_screen_share_24px:before,
+.ic-ic_stop_screen_share_48px:before,
+.ic-ic_store_mall_directory_24px:before,
+.ic-ic_store_mall_directory_48px:before,
+.ic-ic_swap_calls_24px:before,
+.ic-ic_swap_calls_48px:before,
+.ic-ic_terrain_24px:before,
+.ic-ic_terrain_48px:before,
+.ic-ic_textsms_24px:before,
+.ic-ic_textsms_48px:before,
+.ic-ic_traffic_24px:before,
+.ic-ic_traffic_48px:before,
+.ic-ic_voicemail_24px:before,
+.ic-ic_voicemail_48px:before,
+.ic-ic_vpn_key_24px:before,
+.ic-ic_vpn_key_48px:before,
+.ic-ic_zoom_out_map_24px:before,
+.ic-ic_zoom_out_map_48px:before {
+  display: inline-block;
+  font-family: "creative-plus-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.ic-ic_add_location_24px:before { content: "\f100"; }
+.ic-ic_add_location_48px:before { content: "\f101"; }
+.ic-ic_beenhere_24px:before { content: "\f102"; }
+.ic-ic_beenhere_48px:before { content: "\f103"; }
+.ic-ic_business_24px:before { content: "\f104"; }
+.ic-ic_business_48px:before { content: "\f105"; }
+.ic-ic_call_24px:before { content: "\f106"; }
+.ic-ic_call_48px:before { content: "\f107"; }
+.ic-ic_call_end_24px:before { content: "\f108"; }
+.ic-ic_call_end_48px:before { content: "\f109"; }
+.ic-ic_call_made_24px:before { content: "\f10a"; }
+.ic-ic_call_made_48px:before { content: "\f10b"; }
+.ic-ic_call_merge_24px:before { content: "\f10c"; }
+.ic-ic_call_merge_48px:before { content: "\f10d"; }
+.ic-ic_call_missed_24px:before { content: "\f10e"; }
+.ic-ic_call_missed_48px:before { content: "\f10f"; }
+.ic-ic_call_missed_outgoing_24px:before { content: "\f110"; }
+.ic-ic_call_missed_outgoing_48px:before { content: "\f111"; }
+.ic-ic_call_received_24px:before { content: "\f112"; }
+.ic-ic_call_received_48px:before { content: "\f113"; }
+.ic-ic_call_split_24px:before { content: "\f114"; }
+.ic-ic_call_split_48px:before { content: "\f115"; }
+.ic-ic_chat_24px:before { content: "\f116"; }
+.ic-ic_chat_48px:before { content: "\f117"; }
+.ic-ic_chat_bubble_24px:before { content: "\f118"; }
+.ic-ic_chat_bubble_48px:before { content: "\f119"; }
+.ic-ic_chat_bubble_outline_24px:before { content: "\f11a"; }
+.ic-ic_chat_bubble_outline_48px:before { content: "\f11b"; }
+.ic-ic_clear_all_24px:before { content: "\f11c"; }
+.ic-ic_clear_all_48px:before { content: "\f11d"; }
+.ic-ic_comment_24px:before { content: "\f11e"; }
+.ic-ic_comment_48px:before { content: "\f11f"; }
+.ic-ic_contact_mail_24px:before { content: "\f120"; }
+.ic-ic_contact_mail_48px:before { content: "\f121"; }
+.ic-ic_contact_phone_24px:before { content: "\f122"; }
+.ic-ic_contact_phone_48px:before { content: "\f123"; }
+.ic-ic_contacts_24px:before { content: "\f124"; }
+.ic-ic_contacts_48px:before { content: "\f125"; }
+.ic-ic_dialer_sip_24px:before { content: "\f126"; }
+.ic-ic_dialer_sip_48px:before { content: "\f127"; }
+.ic-ic_dialpad_24px:before { content: "\f128"; }
+.ic-ic_dialpad_48px:before { content: "\f129"; }
+.ic-ic_directions_24px:before { content: "\f12a"; }
+.ic-ic_directions_48px:before { content: "\f12b"; }
+.ic-ic_directions_bike_24px:before { content: "\f12c"; }
+.ic-ic_directions_bike_48px:before { content: "\f12d"; }
+.ic-ic_directions_boat_24px:before { content: "\f12e"; }
+.ic-ic_directions_boat_48px:before { content: "\f12f"; }
+.ic-ic_directions_bus_24px:before { content: "\f130"; }
+.ic-ic_directions_bus_48px:before { content: "\f131"; }
+.ic-ic_directions_car_24px:before { content: "\f132"; }
+.ic-ic_directions_car_48px:before { content: "\f133"; }
+.ic-ic_directions_railway_24px:before { content: "\f134"; }
+.ic-ic_directions_railway_48px:before { content: "\f135"; }
+.ic-ic_directions_run_24px:before { content: "\f136"; }
+.ic-ic_directions_run_48px:before { content: "\f137"; }
+.ic-ic_directions_subway_24px:before { content: "\f138"; }
+.ic-ic_directions_subway_48px:before { content: "\f139"; }
+.ic-ic_directions_transit_24px:before { content: "\f13a"; }
+.ic-ic_directions_transit_48px:before { content: "\f13b"; }
+.ic-ic_directions_walk_24px:before { content: "\f13c"; }
+.ic-ic_directions_walk_48px:before { content: "\f13d"; }
+.ic-ic_edit_location_24px:before { content: "\f13e"; }
+.ic-ic_edit_location_48px:before { content: "\f13f"; }
+.ic-ic_email_24px:before { content: "\f140"; }
+.ic-ic_email_48px:before { content: "\f141"; }
+.ic-ic_flight_24px:before { content: "\f142"; }
+.ic-ic_flight_48px:before { content: "\f143"; }
+.ic-ic_forum_24px:before { content: "\f144"; }
+.ic-ic_forum_48px:before { content: "\f145"; }
+.ic-ic_hotel_24px:before { content: "\f146"; }
+.ic-ic_hotel_48px:before { content: "\f147"; }
+.ic-ic_import_contacts_24px:before { content: "\f148"; }
+.ic-ic_import_contacts_48px:before { content: "\f149"; }
+.ic-ic_import_export_24px:before { content: "\f14a"; }
+.ic-ic_import_export_48px:before { content: "\f14b"; }
+.ic-ic_invert_colors_off_24px:before { content: "\f14c"; }
+.ic-ic_invert_colors_off_48px:before { content: "\f14d"; }
+.ic-ic_layers_24px:before { content: "\f14e"; }
+.ic-ic_layers_48px:before { content: "\f14f"; }
+.ic-ic_layers_clear_24px:before { content: "\f150"; }
+.ic-ic_layers_clear_48px:before { content: "\f151"; }
+.ic-ic_live_help_24px:before { content: "\f152"; }
+.ic-ic_live_help_48px:before { content: "\f153"; }
+.ic-ic_local_activity_24px:before { content: "\f154"; }
+.ic-ic_local_activity_48px:before { content: "\f155"; }
+.ic-ic_local_airport_24px:before { content: "\f156"; }
+.ic-ic_local_airport_48px:before { content: "\f157"; }
+.ic-ic_local_atm_24px:before { content: "\f158"; }
+.ic-ic_local_atm_48px:before { content: "\f159"; }
+.ic-ic_local_bar_24px:before { content: "\f15a"; }
+.ic-ic_local_bar_48px:before { content: "\f15b"; }
+.ic-ic_local_cafe_24px:before { content: "\f15c"; }
+.ic-ic_local_cafe_48px:before { content: "\f15d"; }
+.ic-ic_local_car_wash_24px:before { content: "\f15e"; }
+.ic-ic_local_car_wash_48px:before { content: "\f15f"; }
+.ic-ic_local_convenience_store_24px:before { content: "\f160"; }
+.ic-ic_local_convenience_store_48px:before { content: "\f161"; }
+.ic-ic_local_dining_24px:before { content: "\f162"; }
+.ic-ic_local_dining_48px:before { content: "\f163"; }
+.ic-ic_local_drink_24px:before { content: "\f164"; }
+.ic-ic_local_drink_48px:before { content: "\f165"; }
+.ic-ic_local_florist_24px:before { content: "\f166"; }
+.ic-ic_local_florist_48px:before { content: "\f167"; }
+.ic-ic_local_gas_station_24px:before { content: "\f168"; }
+.ic-ic_local_gas_station_48px:before { content: "\f169"; }
+.ic-ic_local_grocery_store_24px:before { content: "\f16a"; }
+.ic-ic_local_grocery_store_48px:before { content: "\f16b"; }
+.ic-ic_local_hospital_24px:before { content: "\f16c"; }
+.ic-ic_local_hospital_48px:before { content: "\f16d"; }
+.ic-ic_local_hotel_24px:before { content: "\f16e"; }
+.ic-ic_local_hotel_48px:before { content: "\f16f"; }
+.ic-ic_local_laundry_service_24px:before { content: "\f170"; }
+.ic-ic_local_laundry_service_48px:before { content: "\f171"; }
+.ic-ic_local_library_24px:before { content: "\f172"; }
+.ic-ic_local_library_48px:before { content: "\f173"; }
+.ic-ic_local_mall_24px:before { content: "\f174"; }
+.ic-ic_local_mall_48px:before { content: "\f175"; }
+.ic-ic_local_movies_24px:before { content: "\f176"; }
+.ic-ic_local_movies_48px:before { content: "\f177"; }
+.ic-ic_local_offer_24px:before { content: "\f178"; }
+.ic-ic_local_offer_48px:before { content: "\f179"; }
+.ic-ic_local_parking_24px:before { content: "\f17a"; }
+.ic-ic_local_parking_48px:before { content: "\f17b"; }
+.ic-ic_local_pharmacy_24px:before { content: "\f17c"; }
+.ic-ic_local_pharmacy_48px:before { content: "\f17d"; }
+.ic-ic_local_phone_24px:before { content: "\f17e"; }
+.ic-ic_local_phone_48px:before { content: "\f17f"; }
+.ic-ic_local_pizza_24px:before { content: "\f180"; }
+.ic-ic_local_pizza_48px:before { content: "\f181"; }
+.ic-ic_local_play_24px:before { content: "\f182"; }
+.ic-ic_local_play_48px:before { content: "\f183"; }
+.ic-ic_local_post_office_24px:before { content: "\f184"; }
+.ic-ic_local_post_office_48px:before { content: "\f185"; }
+.ic-ic_local_printshop_24px:before { content: "\f186"; }
+.ic-ic_local_printshop_48px:before { content: "\f187"; }
+.ic-ic_local_see_24px:before { content: "\f188"; }
+.ic-ic_local_see_48px:before { content: "\f189"; }
+.ic-ic_local_shipping_24px:before { content: "\f18a"; }
+.ic-ic_local_shipping_48px:before { content: "\f18b"; }
+.ic-ic_local_taxi_24px:before { content: "\f18c"; }
+.ic-ic_local_taxi_48px:before { content: "\f18d"; }
+.ic-ic_location_off_24px:before { content: "\f18e"; }
+.ic-ic_location_off_48px:before { content: "\f18f"; }
+.ic-ic_location_on_24px:before { content: "\f190"; }
+.ic-ic_location_on_48px:before { content: "\f191"; }
+.ic-ic_mail_outline_24px:before { content: "\f192"; }
+.ic-ic_mail_outline_48px:before { content: "\f193"; }
+.ic-ic_map_24px:before { content: "\f194"; }
+.ic-ic_map_48px:before { content: "\f195"; }
+.ic-ic_message_24px:before { content: "\f196"; }
+.ic-ic_message_48px:before { content: "\f197"; }
+.ic-ic_my_location_24px:before { content: "\f198"; }
+.ic-ic_my_location_48px:before { content: "\f199"; }
+.ic-ic_navigation_24px:before { content: "\f19a"; }
+.ic-ic_navigation_48px:before { content: "\f19b"; }
+.ic-ic_near_me_24px:before { content: "\f19c"; }
+.ic-ic_near_me_48px:before { content: "\f19d"; }
+.ic-ic_no_sim_24px:before { content: "\f19e"; }
+.ic-ic_no_sim_48px:before { content: "\f19f"; }
+.ic-ic_person_pin_24px:before { content: "\f1a0"; }
+.ic-ic_person_pin_48px:before { content: "\f1a1"; }
+.ic-ic_person_pin_circle_24px:before { content: "\f1a2"; }
+.ic-ic_person_pin_circle_48px:before { content: "\f1a3"; }
+.ic-ic_phone_24px:before { content: "\f1a4"; }
+.ic-ic_phone_48px:before { content: "\f1a5"; }
+.ic-ic_phonelink_erase_24px:before { content: "\f1a6"; }
+.ic-ic_phonelink_lock_24px:before { content: "\f1a7"; }
+.ic-ic_phonelink_ring_24px:before { content: "\f1a8"; }
+.ic-ic_phonelink_setup_24px:before { content: "\f1a9"; }
+.ic-ic_pin_drop_24px:before { content: "\f1aa"; }
+.ic-ic_pin_drop_48px:before { content: "\f1ab"; }
+.ic-ic_place_24px:before { content: "\f1ac"; }
+.ic-ic_place_48px:before { content: "\f1ad"; }
+.ic-ic_portable_wifi_off_24px:before { content: "\f1ae"; }
+.ic-ic_portable_wifi_off_48px:before { content: "\f1af"; }
+.ic-ic_present_to_all_24px:before { content: "\f1b0"; }
+.ic-ic_present_to_all_48px:before { content: "\f1b1"; }
+.ic-ic_rate_review_24px:before { content: "\f1b2"; }
+.ic-ic_rate_review_48px:before { content: "\f1b3"; }
+.ic-ic_restaurant_menu_24px:before { content: "\f1b4"; }
+.ic-ic_restaurant_menu_48px:before { content: "\f1b5"; }
+.ic-ic_ring_volume_24px:before { content: "\f1b6"; }
+.ic-ic_ring_volume_48px:before { content: "\f1b7"; }
+.ic-ic_satellite_24px:before { content: "\f1b8"; }
+.ic-ic_satellite_48px:before { content: "\f1b9"; }
+.ic-ic_screen_share_24px:before { content: "\f1ba"; }
+.ic-ic_screen_share_48px:before { content: "\f1bb"; }
+.ic-ic_speaker_phone_24px:before { content: "\f1bc"; }
+.ic-ic_speaker_phone_48px:before { content: "\f1bd"; }
+.ic-ic_stay_current_landscape_24px:before { content: "\f1be"; }
+.ic-ic_stay_current_landscape_48px:before { content: "\f1bf"; }
+.ic-ic_stay_current_portrait_24px:before { content: "\f1c0"; }
+.ic-ic_stay_current_portrait_48px:before { content: "\f1c1"; }
+.ic-ic_stay_primary_landscape_24px:before { content: "\f1c2"; }
+.ic-ic_stay_primary_landscape_48px:before { content: "\f1c3"; }
+.ic-ic_stay_primary_portrait_24px:before { content: "\f1c4"; }
+.ic-ic_stay_primary_portrait_48px:before { content: "\f1c5"; }
+.ic-ic_stop_screen_share_24px:before { content: "\f1c6"; }
+.ic-ic_stop_screen_share_48px:before { content: "\f1c7"; }
+.ic-ic_store_mall_directory_24px:before { content: "\f1c8"; }
+.ic-ic_store_mall_directory_48px:before { content: "\f1c9"; }
+.ic-ic_swap_calls_24px:before { content: "\f1ca"; }
+.ic-ic_swap_calls_48px:before { content: "\f1cb"; }
+.ic-ic_terrain_24px:before { content: "\f1cc"; }
+.ic-ic_terrain_48px:before { content: "\f1cd"; }
+.ic-ic_textsms_24px:before { content: "\f1ce"; }
+.ic-ic_textsms_48px:before { content: "\f1cf"; }
+.ic-ic_traffic_24px:before { content: "\f1d0"; }
+.ic-ic_traffic_48px:before { content: "\f1d1"; }
+.ic-ic_voicemail_24px:before { content: "\f1d2"; }
+.ic-ic_voicemail_48px:before { content: "\f1d3"; }
+.ic-ic_vpn_key_24px:before { content: "\f1d4"; }
+.ic-ic_vpn_key_48px:before { content: "\f1d5"; }
+.ic-ic_zoom_out_map_24px:before { content: "\f1d6"; }
+.ic-ic_zoom_out_map_48px:before { content: "\f1d7"; }

@@ -16,6 +16,15 @@ test:
   password: <%= ENV['MYSQL2_PASSWORD_TEST'] %>
   host: <%= ENV['MYSQL2_HOST_TEST'] %>
 
+staging:
+  adapter: mysql2
+  encoding: utf8
+  collation: utf8_unicode_ci
+  database: <%= ENV['MYSQL2_DATABASE_STAGING'] %>
+  username: <%= ENV['MYSQL2_USERNAME_STAGING'] %>
+  password: <%= ENV['MYSQL2_PASSWORD_STAGING'] %>
+  host: <%= ENV['MYSQL2_HOST_STAGING'] %>
+
 production:
   adapter: mysql2
   encoding: utf8
